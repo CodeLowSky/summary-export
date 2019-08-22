@@ -2,9 +2,6 @@ import openpyxl
 import argparse
 import os
 
-START_OFFSET = 2
-SKIP_LINE = '  '
-STOP_SEARCH = '-'
 PID_OFFSET = -1
 QUANTITY_OFFSET = 2
 
@@ -24,9 +21,8 @@ class Summary:
 			self.summary = file.readlines()
 			
 	def _get_indices(self):
-		for line, text in enumerate(self.summary):
+		for text in self.summary:
 			if text.find('Order#') != -1:
-				self.start = line
 				self.idx_order = text.find('Order#')
 				self.idx_lpn = text.find('LPN')
 				self.idx_pid = text.find('Product ID')
@@ -35,13 +31,9 @@ class Summary:
 
 	def _get_vals(self, idx):
 		val = []
-		for text in self.summary[self.start+START_OFFSET:]:
-			if text.startswith(SKIP_LINE):
-				continue
-			if text.startswith(STOP_SEARCH):
-				break
-			
-			val.append(text[idx:].split(' ')[0].strip())
+		for text in self.summary:
+			if text[1:7].isdigit(): #line starts with blank + order number
+				val.append(text[idx:].split(' ')[0].strip())
 			
 		return val
 
