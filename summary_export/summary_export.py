@@ -1,5 +1,6 @@
 import openpyxl
 import argparse
+import os
 
 START_OFFSET = 2
 SKIP_LINE = '  '
@@ -48,6 +49,7 @@ class Worksheet:
 	def __init__(self):
 		self.wb = openpyxl.Workbook()
 		self.ws = self.wb.active
+		self.row = 1
 
 	def save(self):
 		self.wb.save('summary.xlsx')
@@ -61,17 +63,30 @@ class Worksheet:
 		
 	def _write_to_worksheet(self, vals, col):
 		for idx, val in enumerate(vals):
-			idx = col+str(idx+1)
-			self.ws[idx] = val
+			cell = col+str(self.row+idx)
+			self.ws[cell] = val
 
 parser = argparse.ArgumentParser(description='Process Summary files to Excel Sheet.')
-parser.add_argument('-s', '--summary', type=str, required=True, help='Input Summary file')
+parser.add_argument('-p', '--path', type=str, required=True, help='Input path to summary files')
 	
 def main():
 	args = parser.parse_args()
-	summary = Summary(args.summary)
+	path = args.path
+	summarys = []
+
+	for filename in os.listdir(path):
+		if filename.lower().endswith(".txt"):
+			file = os.path.join(os.path.abspath(path), filename)
+			summarys.append(Summary(file))
+			continue
+		else:
+			continue
+
 	worksheet = Worksheet()
-	worksheet.import_summary(summary)
+
+	for summary in summarys:
+		worksheet.import_summary(summary)
+
 	worksheet.save()
 
 if __name__ == '__main__':
