@@ -1,0 +1,54 @@
+NCR Summary Shipping Manifest                                                       Shippers Ref. Number:  4026825
+  25-OCT-18
+
+                                          Manifest Ctrl No 40470885
+  Freight Acct: 508120600                 Carrier Id:      4 Day-Surface-Standard Service    Waybill Number: 169812
+
+ Ship To:                                                                              Ship From:
+ NCR Switzerland C/O                                                                    NCR FSD REGIONAL DISTRIBUTION
+ NCR (SCHWEIZ) C/O MOEBELTRANSPORTE AG                                                  CENTER
+ STEINACKERSTRASSE 53                                                                   Building DC7, Leshegyi Ipari
+ 8902 URDORF                                                                            Park
+ CH                                                                                     UTi Worldwide Hungary LLC
+                                                                                        Leshegyi ut 30
+                                                                                        .
+                                                                                        H-2310 Szigetszentmiklós
+                                                                                        HU
+
+                               Parent   Child          *PCC         Product                                         Pallet
+ Order#    Customer PO#  Line# LPN      LPN         Product ID      Description                Qty  Serial No.      Count
+ --------------------------------------------------------------------------------------------------------------------------
+ 4026252   350131656    1.1    BUD322890           6684MC1543       SelfServ84                   1  13-54889346
+                               19
+ 4026676   350199942    1.1    BUD322907           6684MC1994       SelfServ84                   1  13-54889286
+                               53
+ 4026825   350221203    1.1    BUD322893           6684MC2118       SelfServ84                   1  13-54889347
+                               99
+ 4026933   350223670    1.1    BUD323380           6684MC2189       SelfServ84                   1  13-54889404
+                               87
+---------------------------------------------------------------------------------------------------------------------------
+                                                                              Bill To:
+
+                                                                                 RAIFFEISENBANK NIEDERGÖSGEN-
+                                                                                 SCHÖNENWERD-EPPENBERG GENOSSENSCHAFT
+                                                                                 HAUPTSTRASSE 17
+                                                                                 5013 NIEDERGOSGEN
+                                                                                 CH
+---------------------------------------------------------------------------------------------------------------------------
+ Summary Comments:
+ EWH - 91327
+
+
+                                                Total Gross Weight:   3640.00
+                                                Total Net Weight  :   3639
+                                                Total Cube        :   9828000
+
+ -------------------------------------------------------------------------------------------------------------------------
+ Carton Details:
+ Parent LPN     L/W/H UOM     Length           Width          Height       Weight UOM      Gross Weight    Net Weight
+
+ ------------------------------------------------------------------------------------------------------------------------
+ 4x6684	         CC	      141.00           96.00          200.00          KG              910.00
+ --------------------------------------------------------------------------------------------------------------------------
+ Remit Freight Invoice To:
+ Shipper Signature: __________________________  Carrier Signature: __________________________  Date: ______________
