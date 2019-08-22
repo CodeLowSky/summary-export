@@ -79,7 +79,11 @@ def main():
 	for summary in summarys:
 		worksheet.import_summary(summary)
 
-	worksheet.save()
+	try:
+		worksheet.save()
+		print("Summary export successful!")
+	except PermissionError as e:
+		print("Error: {} still open!".format(e))
 
 if __name__ == '__main__':
 	main()
