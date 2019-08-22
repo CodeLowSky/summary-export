@@ -1,10 +1,8 @@
 Example for Summary import:
 
-python summary_export.py -s 197358TN.txt
+python summary_export.py -p ./path_to_summarys
 
-"summary.xlsx" will be created in the same folder.
+"summary.xlsx" will be created in the given folder.
 
 Note:
-Summary has to be in the folder or you give the path to the location.
-Example:
-C:\Users\Username\Documents\Summarys\197358TN.txt
+Default path is the current directory
