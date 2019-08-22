@@ -69,6 +69,7 @@ def main():
 	for filename in os.listdir(path):
 		if filename.lower().endswith(".txt"):
 			file = os.path.join(os.path.abspath(path), filename)
+			print("Found: {}".format(file))
 			summarys.append(Summary(file))
 			continue
 		else:
