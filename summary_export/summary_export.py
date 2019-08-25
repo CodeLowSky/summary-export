@@ -59,7 +59,7 @@ class Worksheet:
 			self.ws[cell] = val
 
 parser = argparse.ArgumentParser(description='Process Summary files to Excel Sheet.')
-parser.add_argument('-p', '--path', type=str, help='Input path to summary files, default is the current path')
+parser.add_argument('-p', '--path', type=str, default=".", help='Input path to summary files, default is the current path')
 	
 def main():
 	args = parser.parse_args()
