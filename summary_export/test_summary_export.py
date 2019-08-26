@@ -3,7 +3,10 @@ import summary_export
 
 class TestSummaryExport(unittest.TestCase):
 	def setUp(self):
-		self.summary = summary_export.Summary('169812TN.txt')
+		try:
+			self.summary = summary_export.Summary('169812TN.txt')
+		except:
+			self.summary = summary_export.Summary('summary_export/169812TN.txt')
 
 	def test_get_order_number(self):
 		self.assertEqual('4026252', self.summary.order_number[0])
