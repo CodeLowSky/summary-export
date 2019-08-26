@@ -17,7 +17,7 @@ class Summary:
 		self.serial_number = self._get_vals(self.idx_sn)
 		
 	def _read_summary(self):
-		with open(self.input) as file:
+		with open(self.input, encoding = "ISO-8859-1") as file:
 			self.summary = file.readlines()
 			
 	def _get_indices(self):
