@@ -1,12 +1,19 @@
+import sys
+import os
 import unittest
-import summary_export
 
+try:
+    import summary_export
+except:
+    sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/../src")
+    import summary_export
+    
 class TestSummaryExport(unittest.TestCase):
 	def setUp(self):
 		try:
-			self.summary = summary_export.Summary('169812TN.txt')
+			self.summary = summary_export.Summary('./169812TN.txt')
 		except:
-			self.summary = summary_export.Summary('summary_export/169812TN.txt')
+			self.summary = summary_export.Summary('../data/169812TN.txt')
 
 	def test_get_order_number(self):
 		self.assertEqual('4026252', self.summary.order_number[0])
