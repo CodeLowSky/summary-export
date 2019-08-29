@@ -11,7 +11,7 @@ except:
 class TestSummaryExport(unittest.TestCase):
 	def setUp(self):
 		try:
-			self.summary = summary_export.Summary('./169812TN.txt')
+			self.summary = summary_export.Summary('./data/169812TN.txt')
 		except:
 			self.summary = summary_export.Summary('../data/169812TN.txt')
 
