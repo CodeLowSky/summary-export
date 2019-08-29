@@ -6,10 +6,10 @@ def readme():
 
 
 setuptools.setup(
-	name='summary_export',
+    name='summary_export',
     version='0.1',
     author='Maximilian Koslowsky',
-    author_email='m_koslowsky@yahoo.de',
+    author_email='lowsky.coding@gmail.com',
     description='Exporting summary text files to excel.',
     long_description=readme(),
     long_description_content_type="text/markdown",
@@ -17,10 +17,5 @@ setuptools.setup(
     install_requires=[
         'openpyxl',
     ],
-	scripts=['summary_export.py'],
-    # entry_points={
-    #     'console_scripts': [
-	# 		'summary_export=summary_export.summary_export:main'
-	# 	],
-    # },
+	scripts=['src/summary_export.py'],
 )
